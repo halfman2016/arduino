@@ -14,6 +14,7 @@ void loop() {
 
 if(digitalRead(12)==HIGH){
   Serial.println("have");
+  
   for(int i =0 ;i<1;i++){
     digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
   delay(200);                       // wait for a second
