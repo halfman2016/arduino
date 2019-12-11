@@ -44,27 +44,45 @@ attachInterrupt(digitalPinToInterrupt(3), redlight, HIGH); //注意, 0代表的�
 
 void loop() {
   // put your main code here, to run repeatedly:
+
+ 
+ if(digitalRead(IRHLD)!=LOW)
+ {
+    }
+  else{
+//红灯
+    redlight();
+  }
   
- if(digitalRead(IRETC)==HIGH){
-  //etc
+ if(digitalRead(IRETC)!=LOW)
+ {
+    }
+  else{
+    //etc
+        Serial.println("etc ir");
+
   up(msetc);
   delay(DZTIME);
   down(msetc);
-  }
+    }
 
-   if(digitalRead(IRIN)==HIGH){
-  //IN遮挡
+   if(digitalRead(IRIN)!=LOW){
+    }else{
+    //IN遮挡
+    Serial.println("in ir");
   up(msin);
   delay(DZTIME);
   down(msin);
-  }
-   if(digitalRead(IROUT)==HIGH){
-  //OUT遮挡
-  
+    }
+   if(digitalRead(IROUT)!=LOW){
+   }else{
+     //OUT遮挡
+   //OUT遮挡
+      Serial.println("out ir");
   up(msout);
   delay(DZTIME);
   down(msout);
-  }
+      }
    
  //风扇
 

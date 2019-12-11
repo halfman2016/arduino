@@ -1,5 +1,5 @@
 
-
+int ii=0;
 void setup() {
   // put your setup code here, to run once:
 pinMode(12,INPUT);
@@ -12,14 +12,16 @@ Serial.println(LED_BUILTIN);
 void loop() {
   // put your main code here, to run repeatedly:
 
-if(digitalRead(12)==HIGH){
-  Serial.println("have");
+if(digitalRead(12)!=LOW){
   
-  for(int i =0 ;i<1;i++){
-    digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(200);                       // wait for a second
-  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
-  delay(100);  
+  
   }
-  }
+  else
+  {
+      Serial.println(ii);
+  ii++;
+
+    }
+  
+  delay(100);
 }
