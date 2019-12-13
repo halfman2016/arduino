@@ -1,0 +1,9 @@
+---- _tx_delay Matches (8 in 2 files) ----
+SoftwareSerial.cpp (softwareserial):  _tx_delay(0),
+SoftwareSerial.cpp (softwareserial):  _rx_delay_centering = _rx_delay_intrabit = _rx_delay_stopbit = _tx_delay = 0;
+SoftwareSerial.cpp (softwareserial):  _tx_delay = subtract_cap(bit_delay, 15 / 4);
+SoftwareSerial.cpp (softwareserial):    tunedDelay(_tx_delay); // if we were low this establishes the end
+SoftwareSerial.cpp (softwareserial):  if (_tx_delay == 0) {
+SoftwareSerial.cpp (softwareserial):  uint16_t delay = _tx_delay;
+SoftwareSerial.cpp (softwareserial):  tunedDelay(_tx_delay);
+SoftwareSerial.h (softwareserial):  uint16_t _tx_delay;

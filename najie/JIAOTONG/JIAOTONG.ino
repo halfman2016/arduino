@@ -26,11 +26,19 @@ int pos=0;
 void setup() {
   // put your setup code here, to run once:
 pinMode(HLDRED,OUTPUT);
-pinMode(HLDGREEN,OUTPUT);
+pinMode(HLDGREEN,OUTPUT);  //设置上拉电阻
 pinMode(IRETC,INPUT);
+digitalWrite(IRETC,HIGH);
 pinMode(IRIN,INPUT);
+digitalWrite(IRIN,HIGH);
 pinMode(IROUT,INPUT);
+digitalWrite(IROUT,HIGH);
+
 pinMode(IRHLD,INPUT);
+digitalWrite(IRHLD,HIGH);
+
+digitalWrite(IRETC,HIGH)
+
 
 msetc.attach(DZETC); 
 msin.attach(DZIN);

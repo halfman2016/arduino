@@ -5,9 +5,13 @@
 #include <AM2320.h>
 #define TFT_RX 4//RX of Serial TFT module connect to D4 of Arduino / OPEN-SMART UNO
 #define TFT_TX 2//TX of Serial TFT to D2
-#define FAN1 A1
-#define FAN2 A2
-#define FAN3 A3
+#define FAN1 9
+#define FAN2 10
+#define FAN3 11
+
+//pwm 3, 5, 6, 9, 10, 11
+
+
 
 AM2320 th;
 BH1750 lightMeter;
@@ -73,6 +77,15 @@ delay(3000);
 s=0;
 }
     
-                             
+    fan(FAN1,FAN2,FAN3);                         
   
+}
+
+void fan(int a,int b,int c){
+   for(int i=0;i<180;i++){
+   analogWrite(a,i);
+   analogWrite(b,i);
+   analogWrite(c,i);
+   delay(40);
+   }
 }
