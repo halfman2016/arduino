@@ -35,6 +35,7 @@ uint16_t curlight=0;
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
+  
   lcd.begin (16,2); // for 16 x 2 LCD module 
   lcd.setBacklightPin(3,POSITIVE); 
   lcd.setBacklight(HIGH); 
@@ -49,6 +50,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  Serial.print("Moisture Sensor Value:");
 l=lightMeter.readLightLevel();
 
     Serial.print(l);
