@@ -37,7 +37,7 @@ digitalWrite(IROUT,HIGH);
 pinMode(IRHLD,INPUT);
 digitalWrite(IRHLD,HIGH);
 
-digitalWrite(IRETC,HIGH)
+digitalWrite(IRETC,HIGH);
 
 
 msetc.attach(DZETC); 

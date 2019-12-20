@@ -9,10 +9,13 @@
                 "C:\\arduino-1.8.10\\hardware\\tools\\avr\\avr\\include\\**",
                 "C:\\Users\\jiang\\AppData\\Local\\Arduino15\\packages\\esp8266\\tools\\**",
                 "C:\\Users\\jiang\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.6.2\\**",
-                "C:\\arduino-1.8.10\\libraries\\**"
+                "C:\\arduino-1.8.10\\libraries\\**",
+                "C:\\Users\\jiang\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.2\\**",
+                "C:\\Users\\jiang\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\**"
             ],
             "forcedInclude": [
-                "C:\\arduino-1.8.10\\hardware\\arduino\\avr\\cores\\arduino\\Arduino.h"
+                "C:\\arduino-1.8.10\\hardware\\arduino\\avr\\cores\\arduino\\Arduino.h",
+                "C:\\Users\\jiang\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino\\Arduino.h"
             ],
             "intelliSenseMode": "msvc-x64",
             "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.23.28105/bin/Hostx64/x64/cl.exe",

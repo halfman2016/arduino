@@ -17,11 +17,11 @@
 #define MOS A1 //土壤湿度信号线A1插口
 //#define TH  A2 //气温，空气湿度A2接口
 #define LUDENG 13 //路灯继电器控制口
-#define LON 50   //开灯临界值，低于定义自动开灯
+int LON=50 ;  //开灯临界值，低于定义自动开灯
 
 
 //屏幕
-LiquidCrystal_I2C lcd(0x27,2,1,0,4,5,6,7); // 0x27 is the I2C bus address for an unmodified backpack 
+
 
 //dht DHT;
 BH1750 lightMeter;  //I2C 接口
@@ -34,7 +34,7 @@ uint16_t curlight=0;
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(9600);
+  Serial.begin(115200);
   
   lcd.begin (16,2); // for 16 x 2 LCD module 
   lcd.setBacklightPin(3,POSITIVE); 
@@ -45,38 +45,38 @@ void setup() {
   lcd.print(millis()); 
 
  lightMeter.begin(); //光强初始化
-
+ pinMode(LUDENG,OUTPUT);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  Serial.print("Moisture Sensor Value:");
 l=lightMeter.readLightLevel();
-
-    Serial.print(l);
+Serial.print("light:");
+Serial.print(l);
 
 if(curlight == l)
     {
-      }
+      
+    }
     else
     {
     curlight = l;
+    Serial.print("NEW L");
     Serial.print(curlight);
     if (curlight < LON)
   {
      digitalWrite(LUDENG,HIGH);
-   //  delay(10);
+    delay(10);
   }
   else
   {
      digitalWrite(LUDENG,LOW);
-     //   delay(10);
+     delay(10);
 
     }
     }
 
-   Serial.print("Moisture Sensor Value:");
-   Serial.println(A2);     
+        
    m=analogRead(A1);
   //DHT.read11(A2);
  //t=DHT.temperature;

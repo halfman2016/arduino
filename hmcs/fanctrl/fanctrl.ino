@@ -28,18 +28,25 @@ Serial.println(A7);
 void loop() {
   // put your main code here, to run repeatedly:
 fand(FAN1,20);
-fand(FAN2,35);
-fand(FAN3,35);
-fand(FAN4,35);
-fand(FAN5,35);
+fand(FAN2,33);
+fand(FAN3,30);
+fand(FAN4,30);
+fand(FAN5,40);
 fand(FAN6,35);
-fana1(35);
+fana1(55);
 fana2(35);
-fana3(35);
-fana4(35);
+fana3(40);
+fana4(25);
 fana5(35);
+fana0(45);
 
 
+}
+void fana0(int dl){
+  for(int i=0;i<180;i++){
+   analogWrite(A0,i);
+   delay(dl);
+   }
 }
 void fana1(int dl){
   //120 勉强动
