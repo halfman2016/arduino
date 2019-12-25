@@ -1,27 +1,27 @@
-
+#define IR 3
 int ii=0;
 void setup() {
   // put your setup code here, to run once:
-pinMode(12,INPUT);
+pinMode(IR,INPUT);
 Serial.begin(9600);
-Serial.println(LED_BUILTIN);
-  pinMode(LED_BUILTIN, OUTPUT);
+pinMode(LED_BUILTIN, OUTPUT);
 
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
 
-if(digitalRead(12)!=LOW){
+if(digitalRead(IR)==LOW){
   
-  
+  Serial.println(ii);
+  ii++;
   }
   else
   {
-      Serial.println(ii);
-  ii++;
+      
 
     }
+
+
   
-  delay(100);
 }
