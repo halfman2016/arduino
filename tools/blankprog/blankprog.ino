@@ -2,10 +2,10 @@
 int txPin = 9;//接蓝牙TX口
 int rxPin = 10;//接蓝牙RX口
 //XIAOCHE 
-//SoftwareSerial BTSerial(9,10); 
+SoftwareSerial BTSerial(9,10); 
 
 // BAN 
-SoftwareSerial BTSerial(4,2); 
+//SoftwareSerial BTSerial(4,2); 
 
 void setup() 
 {  

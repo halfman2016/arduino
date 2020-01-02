@@ -7,8 +7,10 @@
  */
 
 #include <IRremote.h>
+#include <LiquidCrystal_I2C.h>
+LiquidCrystal_I2C lcd(0x27,16,2);
 
-int RECV_PIN = 11;
+int RECV_PIN = 3;
 
 IRrecv irrecv(RECV_PIN);
 
@@ -17,12 +19,15 @@ decode_results results;
 void setup()
 {
   Serial.begin(9600);
+  lcd.begin();
+  lcd.autoscroll();
   irrecv.enableIRIn(); // Start the receiver
 }
 
 void loop() {
+  
   if (irrecv.decode(&results)) {
-    Serial.println(results.value, HEX);
-    irrecv.resume(); // Receive the next value
+        Serial.println(results.value);
+        }
+  irrecv.resume(); // Receive the next value
   }
-}
